@@ -1,0 +1,155 @@
+<html>
+<head>
+  <title>Wanderly</title>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo">WANDERLY ✈️</div>
+
+```
+<div class="menu">
+  <a href="#">Home</a>
+  <a href="#destinations">Destinations</a>
+  <a href="#tips">Travel Tips</a>
+  <a href="#contact">Contact</a>
+</div>
+```
+
+  </nav>
+
+  <header>
+    <h1>WANDERLY</h1>
+    <p>Discover the world, one journey at a time.</p>
+
+```
+<button onclick="document.getElementById('destinations').scrollIntoView()">
+  Explore destinations
+</button>
+```
+
+  </header>
+
+  <section class="destinations" id="destinations">
+
+```
+<h2>Popular Destinations 🌎</h2>
+<p class="section-text">
+  Find your next unforgettable adventure.
+</p>
+
+<div class="cards">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80">
+
+    <div class="card-content">
+      <h3>Paris 🇫🇷</h3>
+      <p>The city of love, art and unforgettable moments.</p>
+      <button onclick="showDestination('paris')">Discover</button>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=800&q=80">
+
+    <div class="card-content">
+      <h3>Tokyo 🇯🇵</h3>
+      <p>A perfect mix of modern life, culture and tradition.</p>
+     <button onclick="showDestination('tokyo')">Discover</button>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80">
+
+    <div class="card-content">
+      <h3>Maldives 🇲🇻</h3>
+      <p>Crystal clear water, beaches and complete relaxation.</p>
+      <button onclick="showDestination('maldives')">Discover</button>
+    </div>
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <section class="tips" id="tips">
+
+```
+<h2>Travel Tips ✨</h2>
+
+<div class="tip-container">
+
+  <div class="tip">
+    <div class="tip-icon">🎒</div>
+    <h3>Pack Smart</h3>
+    <p>
+      Take only what you really need and leave some space
+      for souvenirs.
+    </p>
+  </div>
+
+  <div class="tip">
+    <div class="tip-icon">💳</div>
+    <h3>Save Money</h3>
+    <p>
+      Book flights early and compare prices before travelling.
+    </p>
+  </div>
+
+  <div class="tip">
+    <div class="tip-icon">📸</div>
+    <h3>Capture Memories</h3>
+    <p>
+      Take photos, but don't forget to enjoy the moment too.
+    </p>
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <section class="contact" id="contact">
+
+```
+<h2>Ready for your next adventure? ✈️</h2>
+
+<p>Start planning your dream journey with Wanderly.</p>
+
+<button>Start Exploring</button>
+```
+
+  </section>
+
+  <footer>
+    <p>© 2026 Wanderly. Travel. Explore. Dream.</p>
+  </footer>
+<div id="destinationModal" class="modal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h2 id="modalTitle"></h2>
+
+    <p id="modalDescription"></p>
+
+    <div class="info">
+      <p>🌤️ <strong>Best time:</strong> <span id="modalTime"></span></p>
+      <p>💰 <strong>Budget:</strong> <span id="modalBudget"></span></p>
+      <p>📍 <strong>Must visit:</strong> <span id="modalPlace"></span></p>
+    </div>
+
+    <button onclick="closeModal()">Close</button>
+
+  </div>
+
+</div>
+</body>
+</html>
