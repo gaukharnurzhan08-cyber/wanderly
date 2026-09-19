@@ -1,0 +1,372 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  }
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #f5fbff;
+color: #17324d;
+}
+
+/* NAVIGATION */
+
+nav {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 70px;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 0 60px;
+
+background: rgba(255, 255, 255, 0.95);
+box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+
+z-index: 1000;
+}
+
+.logo {
+font-size: 24px;
+font-weight: bold;
+color: #1597c5;
+letter-spacing: 2px;
+}
+
+.menu {
+display: flex;
+gap: 30px;
+}
+
+.menu a {
+text-decoration: none;
+color: #17324d;
+font-size: 16px;
+transition: 0.3s;
+}
+
+.menu a:hover {
+color: #1597c5;
+}
+
+/* HERO */
+
+header {
+min-height: 100vh;
+
+background:
+linear-gradient(
+rgba(21, 151, 197, 0.45),
+rgba(224, 247, 250, 0.45)
+),
+url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=80");
+
+background-size: cover;
+background-position: center;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+text-align: center;
+color: white;
+
+padding: 30px;
+}
+
+header h1 {
+font-size: 80px;
+margin: 0 0 10px;
+letter-spacing: 8px;
+}
+
+header p {
+font-size: 25px;
+margin-bottom: 35px;
+}
+
+button {
+padding: 15px 32px;
+border: none;
+border-radius: 30px;
+
+background: white;
+color: #1597c5;
+
+font-size: 17px;
+font-weight: bold;
+
+cursor: pointer;
+transition: 0.3s;
+}
+
+button:hover {
+transform: scale(1.08);
+}
+
+/* DESTINATIONS */
+
+.destinations {
+padding: 100px 40px;
+text-align: center;
+}
+
+.destinations h2,
+.tips h2 {
+font-size: 42px;
+margin-bottom: 10px;
+}
+
+.section-text {
+color: #78909c;
+font-size: 18px;
+margin-bottom: 45px;
+}
+
+.cards {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+}
+
+.card {
+width: 330px;
+
+background: white;
+
+border-radius: 20px;
+
+overflow: hidden;
+
+box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+transition: 0.3s;
+}
+
+.card:hover {
+transform: translateY(-10px);
+}
+
+.card img {
+width: 100%;
+height: 210px;
+object-fit: cover;
+}
+
+.card-content {
+padding: 25px;
+}
+
+.card h3 {
+font-size: 27px;
+margin: 0 0 12px;
+}
+
+.card p {
+color: #607d8b;
+line-height: 1.5;
+margin-bottom: 25px;
+}
+
+.card button {
+background: #1597c5;
+color: white;
+}
+
+/* TRAVEL TIPS */
+
+.tips {
+padding: 100px 40px;
+background: #eaf8fc;
+text-align: center;
+}
+
+.tip-container {
+display: flex;
+justify-content: center;
+gap: 30px;
+flex-wrap: wrap;
+margin-top: 50px;
+}
+
+.tip {
+width: 280px;
+padding: 30px;
+
+background: white;
+border-radius: 20px;
+
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+transition: 0.3s;
+}
+
+.tip:hover {
+transform: translateY(-7px);
+}
+
+.tip-icon {
+font-size: 45px;
+margin-bottom: 15px;
+}
+
+.tip h3 {
+font-size: 23px;
+}
+
+.tip p {
+color: #607d8b;
+line-height: 1.5;
+}
+
+/* CONTACT */
+
+.contact {
+padding: 100px 30px;
+
+text-align: center;
+
+background: linear-gradient(135deg, #1597c5, #87ceeb);
+
+color: white;
+}
+
+.contact h2 {
+font-size: 40px;
+margin-bottom: 15px;
+}
+
+.contact p {
+font-size: 20px;
+margin-bottom: 30px;
+}
+
+/* FOOTER */
+
+footer {
+padding: 25px;
+text-align: center;
+background: #17324d;
+color: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+nav {
+padding: 0 20px;
+}
+
+.menu {
+gap: 10px;
+}
+
+.menu a {
+font-size: 12px;
+}
+
+header h1 {
+font-size: 50px;
+}
+
+header p {
+font-size: 18px;
+}
+
+.destinations h2,
+.tips h2 {
+font-size: 32px;
+}
+
+}
+/* DESTINATION MODAL */
+
+.modal {
+display: none;
+position: fixed;
+z-index: 2000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.55);
+align-items: center;
+justify-content: center;
+padding: 20px;
+}
+
+.modal-content {
+position: relative;
+width: 500px;
+max-width: 100%;
+background: white;
+border-radius: 25px;
+padding: 40px;
+text-align: center;
+box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+animation: popup 0.3s ease;
+}
+
+.modal-content h2 {
+font-size: 35px;
+color: #1597c5;
+margin-bottom: 20px;
+}
+
+.modal-content > p {
+color: #607d8b;
+font-size: 17px;
+line-height: 1.6;
+margin-bottom: 25px;
+}
+
+.info {
+background: #eaf8fc;
+border-radius: 15px;
+padding: 15px;
+margin-bottom: 25px;
+}
+
+.info p {
+color: #17324d;
+margin: 10px 0;
+}
+
+.modal-content button {
+background: #1597c5;
+color: white;
+}
+
+.close {
+position: absolute;
+top: 15px;
+right: 25px;
+font-size: 32px;
+color: #607d8b;
+cursor: pointer;
+}
+
+.close:hover {
+color: #1597c5;
+}
+
+@keyframes popup {
+from {
+transform: scale(0.8);
+opacity: 0;
+}
+
+to {
+transform: scale(1);
+opacity: 1;
+}
+}
+
